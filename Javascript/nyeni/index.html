@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Yaş yoxlama</title>
+</head>
+<body>
+
+<p id="result"></p>
+
+<input type="number" id="birthYear" placeholder="Doğum ilini daxil et">
+<button onclick="tikla()">Yoxla</button>
+
+<script>
+function tikla() {
+    let il = document.getElementById("birthYear").value;
+    let cariIl = new Date().getFullYear();
+    let yas = cariIl - il;
+
+    if (yas >= 18) {
+        document.getElementById("result").innerText = "Prava düşür";
+    } else {
+        document.getElementById("result").innerText = "Prava düşmür";
+    }
+}
+</script>
+
+</body>
+</html>
